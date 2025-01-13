@@ -25,7 +25,7 @@ static const u64   KERN_TYPE      = 95000;
 static const u32   OPTI_TYPE      = OPTI_TYPE_PRECOMPUTE_INIT;
 static const u64   OPTS_TYPE      = 0;
 static const u32   SALT_TYPE      = SALT_TYPE_GENERIC;
-static const char *ST_PASS        = "2233";
+static const char *ST_PASS        = "hashcat";
 static const char *ST_HASH        = "user3:8f07611dc3f0fab5454a8db2a9cd200e:04c3b4b2c30d98103ef97bab7480f73e12504af29774d6d2535f3fb4f81d0351";
 
 u32         module_attack_exec    (MAYBE_UNUSED const hashconfig_t *hashconfig, MAYBE_UNUSED const user_options_t *user_options, MAYBE_UNUSED const user_options_extra_t *user_options_extra) { return ATTACK_EXEC;     }

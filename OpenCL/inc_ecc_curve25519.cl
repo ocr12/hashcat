@@ -734,7 +734,7 @@ DECLSPEC void inv_mod (PRIVATE_AS u32 *a)
 
 /*
  * Convert the tweak/scalar k to w-NAF (window size is 4).
- * @param naf out: w-NAF form of the tweak/scalar, a pointer to an u32 array with a size of 16.
+ * @param naf out: w-NAF form of the tweak/scalar, a pointer to an u32 array with a size of 17.
  * @param k in: tweak/scalar which should be converted, a pointer to an u32 array with a size of 8.
  * @return Returns the loop start index.
  */
@@ -804,8 +804,7 @@ DECLSPEC int convert_to_window_naf (PRIVATE_AS u32 *naf, PRIVATE_AS const u32 *k
  */
 DECLSPEC void point_mul (PRIVATE_AS u32 *x, PRIVATE_AS u32 *y, PRIVATE_AS u32 *z, PRIVATE_AS const ecc_params_t* params, PRIVATE_AS const u32 *k)
 {
-  u32 naf[16] = { 0 };
-
+  u32 naf[17] = { 0 };
   int loop_start = convert_to_window_naf (naf, k);
 
   x[0] = 0;
