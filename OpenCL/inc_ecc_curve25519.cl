@@ -63,7 +63,7 @@ typedef struct
   u32 c[8];
 } ecc_params_t;
 
-DECLSPEC void print_num(__constant char* prefix, PRIVATE_AS const u32* n)
+DECLSPEC void print_num(const char* prefix, PRIVATE_AS const u32* n)
 {
   printf("\n%s: ", prefix);
   for (int i = 7; i >= 0; --i)
